@@ -25,7 +25,7 @@ class myFloater extends Floater
     return this.myColor;
   }
 
-  public void moveRemove(ArrayList<movingFloater> mF) //note that this should NOT be called in a for loop
+  public void moveRemove(ArrayList <movingFloater> mF) //note that this should NOT be called in a for loop
   {
     for (int i = mF.size()-1; i >=0; i--)
     {
