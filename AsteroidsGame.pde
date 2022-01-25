@@ -19,7 +19,7 @@ void setup()
   myS = new Spaceship();
   starSetup();
 
-  for (int i = 0; i < 10; i ++)
+  for (int i = 0; i < 5; i ++)
   {
     asteriods.add(new Asteroid(true, (int) (Math.random() * width), (int) (Math.random() * height)));
   }
