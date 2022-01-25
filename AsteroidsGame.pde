@@ -209,9 +209,9 @@ void keyPressed()
   
   if (keyCode == 72)
   {
-    ship.setX(Math.random()*width);
-    ship.setY(Math.random()*height);
-    ship.setVel(0, 0);
+    myS.setX(Math.random()*width);
+    myS.setY(Math.random()*height);
+    myS.setVel(0, 0);
   }
 }
 
