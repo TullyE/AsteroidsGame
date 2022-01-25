@@ -207,7 +207,7 @@ void keyPressed()
     shoot = true;
   }
   
-  if (key == 'h')
+  if (keyCode == 72)
   {
     ship.setX(Math.random()*width);
     ship.setY(Math.random()*height);
