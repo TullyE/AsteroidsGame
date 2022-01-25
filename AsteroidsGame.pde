@@ -38,58 +38,60 @@ void draw()
     text("YOU WIN", width/2, height/2);
     stop();
   }
+  else
+    {
+    showStars();
+    bulletCollision();
+    removeBullets(bullets);
+    removeAsteroids(asteriods);
+    shipCollision();
 
-  showStars();
-  bulletCollision();
-  removeBullets(bullets);
-  removeAsteroids(asteriods);
-  shipCollision();
 
+    for (Asteroid a : asteriods)
+    {
+      noFill();
+      strokeWeight(2);
+      stroke(255);
+      a.move();
+      a.show();
+    }
 
-  for (Asteroid a : asteriods)
-  {
-    noFill();
-    strokeWeight(2);
-    stroke(255);
-    a.move();
-    a.show();
+    for (Bullet b : bullets)
+    {
+      noFill();
+      strokeWeight(2);
+      stroke(255);
+      b.show();
+      b.move();
+    }
+
+    fill(255, 0, 0);
+    stroke(255, 0, 0);
+    myS.show();
+    myS.move();
+    if (accelerate)
+    {
+      myS.accelerate(.1);
+    }
+    if (right)
+    {
+      myS.turn(4);
+    }
+    if (left)
+    {
+      myS.turn(-4);
+    }
+
+    textSize(32);
+    fill(255);
+    text("Asteroids left: " + asteriods.size(), 0, 32);
+    text("X : " + (int) myS.getX(), 0, 32 * 2);
+    text("Y : " + (int) myS.getY(), 0, 32 * 3);
+    text("X Speed: " +  (int) myS.getXSpeed(), 0, 32 * 4);
+    text("Y Speed: " + (int) myS.getYSpeed(), 0, 32 * 5);
+    text("Point Direction: " + myS.getPointDir(), 0, 32 * 6);
+    text("Health: " + playerHealth, 0, 32 * 7);
   }
-
-  for (Bullet b : bullets)
-  {
-    noFill();
-    strokeWeight(2);
-    stroke(255);
-    b.show();
-    b.move();
-  }
-
-  fill(255, 0, 0);
-  stroke(255, 0, 0);
-  myS.show();
-  myS.move();
-  if (accelerate)
-  {
-    myS.accelerate(.1);
-  }
-  if (right)
-  {
-    myS.turn(4);
-  }
-  if (left)
-  {
-    myS.turn(-4);
-  }
-
-  textSize(32);
-  fill(255);
-  text("Asteroids left: " + asteriods.size(), 0, 32);
-  text("X : " + (int) myS.getX(), 0, 32 * 2);
-  text("Y : " + (int) myS.getY(), 0, 32 * 3);
-  text("X Speed: " +  (int) myS.getXSpeed(), 0, 32 * 4);
-  text("Y Speed: " + (int) myS.getYSpeed(), 0, 32 * 5);
-  text("Point Direction: " + myS.getPointDir(), 0, 32 * 6);
-  text("Health: " + playerHealth, 0, 32 * 7);
 }
 
 public void starSetup()
