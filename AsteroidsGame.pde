@@ -7,8 +7,8 @@ boolean accelerate = false;
 boolean left = false;
 boolean right = false;
 Star[] starField = new Star[200];
-ArrayList<Asteroid> asteriods = new ArrayList <Asteroid> ();
-ArrayList<Bullet> bullets = new ArrayList <Bullet> ();
+ArrayList <Asteroid> asteriods = new ArrayList <Asteroid> ();
+ArrayList <Bullet> bullets = new ArrayList <Bullet> ();
 boolean shoot = false;
 int playerHealth = 3;
 
