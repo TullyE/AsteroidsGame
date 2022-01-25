@@ -204,6 +204,13 @@ void keyPressed()
     }
     shoot = true;
   }
+  
+  if (key == 'h')
+  {
+    ship.setX(Math.random()*width);
+    ship.setY(Math.random()*height);
+    ship.setVel(0, 0);
+  }
 }
 
 void keyReleased()
