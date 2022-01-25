@@ -15,7 +15,7 @@ int playerHealth = 3;
 Spaceship myS;
 void setup()
 {
-  size(800, 600);
+  size(500, 500);
   myS = new Spaceship();
   starSetup();
 
